@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069118844420",
+    "project_id": "dormibemm",
+    "storage_bucket": "dormibemm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069118844420:android:72f734de9e20115c770f51",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWRv6ClUQ2yuaoGjJRUTXJsvEcOJAtpF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
