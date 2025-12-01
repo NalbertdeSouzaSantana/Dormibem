@@ -39,35 +39,45 @@ class _PagLoginState extends State<PagLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF3B3A63),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.nightlight_round, size: 80, color: Colors.white),
-              const SizedBox(height: 10),
-              const Text(
-                "DormirBem",
-                style: TextStyle(fontSize: 26, color: Colors.white),
-              ),
-              const SizedBox(height: 40),
+      resizeToAvoidBottomInset: true, // 👈 IMPORTANTE
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(
+                  Icons.nightlight_round,
+                  size: 80,
+                  color: Colors.white,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "DormirBem",
+                  style: TextStyle(fontSize: 26, color: Colors.white),
+                ),
+                const SizedBox(height: 40),
 
-              _buildCampo(emailController, "Email"),
-              const SizedBox(height: 15),
+                _buildCampo(emailController, "Email"),
+                const SizedBox(height: 15),
 
-              _buildCampo(senhaController, "Senha", isSenha: true),
-              const SizedBox(height: 20),
+                _buildCampo(senhaController, "Senha", isSenha: true),
+                const SizedBox(height: 20),
 
-              loading
-                  ? const CircularProgressIndicator(color: Colors.white)
-                  : _buildBotao("Entrar", login),
+                loading
+                    ? const CircularProgressIndicator(color: Colors.white)
+                    : _buildBotao("Entrar", login),
 
-              const SizedBox(height: 10),
+                const SizedBox(height: 10),
 
-              _buildBotao("Registrar", () {
-                Navigator.pushNamed(context, "/cadastro");
-              }, invertido: true),
-            ],
+                _buildBotao(
+                  "Registrar",
+                  () => Navigator.pushNamed(context, "/cadastro"),
+                  invertido: true,
+                ),
+              ],
+            ),
           ),
         ),
       ),
