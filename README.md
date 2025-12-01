@@ -16,13 +16,6 @@ O DormirBem é um aplicativo desenvolvido para auxiliar o usuário a melhorar a 
 
 https://github.com/user-attachments/assets/e30a5c87-efc8-457a-a895-8ebcb5797a38
 
-## 🛠 Como Executar
-
-1. Baixe o repositório:
-   - Clique em **Code > Download ZIP** no GitHub
-   - Extraia o arquivo em qualquer pasta
-
-2. Abra o projeto no **VS Code** (ou Android Studio).
 
 3. Certifique-se de que você possui o **Flutter instalado** na máquina.
 
