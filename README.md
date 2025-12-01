@@ -14,8 +14,7 @@ O DormirBem é um aplicativo desenvolvido para auxiliar o usuário a melhorar a 
 
 ##  🖼 Capturas de tela / Vídeo de demonstração
 
-https://github.com/user-attachments/assets/e30a5c87-efc8-457a-a895-8ebcb5797a38
-
+https://github.com/user-attachments/assets/74307b97-b425-47e1-8799-fb4c4d231d31
 
 3. Certifique-se de que você possui o **Flutter instalado** na máquina.
 
