@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class PagCadastro extends StatefulWidget {
   const PagCadastro({super.key});
-
   @override
   State<PagCadastro> createState() => _PagCadastroState();
 }
@@ -13,7 +12,6 @@ class _PagCadastroState extends State<PagCadastro> {
   final senhaController = TextEditingController();
   final confirmarController = TextEditingController();
   bool loading = false;
-
   Future<void> registrar() async {
     if (senhaController.text.trim() != confirmarController.text.trim()) {
       ScaffoldMessenger.of(
@@ -21,9 +19,7 @@ class _PagCadastroState extends State<PagCadastro> {
       ).showSnackBar(const SnackBar(content: Text("As senhas não coincidem!")));
       return;
     }
-
     setState(() => loading = true);
-
     try {
       if (!emailController.text.contains("@")) {
         ScaffoldMessenger.of(
@@ -31,23 +27,20 @@ class _PagCadastroState extends State<PagCadastro> {
         ).showSnackBar(const SnackBar(content: Text("Email inválido")));
         return;
       }
-
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailController.text.trim(),
         password: senhaController.text.trim(),
       );
-
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Conta criada com sucesso!")),
       );
-
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
-      print("ERRO FIREBASE: ${e.code}");
-      print("MENSAGEM: ${e.message}");
-
-      String msg = "ERRO: ${e.code}\n${e.message}";
-
+      String msg = switch (e.code) {
+        "weak-password" => "A senha deve ter pelo menos 6 caracteres.",
+        "email-already-in-use" => "Este email já está em uso.",
+        _ => "Erro: ${e.code}",
+      };
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
     } finally {
       setState(() => loading = false);
@@ -69,20 +62,16 @@ class _PagCadastroState extends State<PagCadastro> {
                 style: TextStyle(fontSize: 26, color: Colors.white),
               ),
               const SizedBox(height: 40),
-
               _buildCampo(emailController, "Email"),
               const SizedBox(height: 15),
-
               _buildCampo(senhaController, "Senha", isSenha: true),
               const SizedBox(height: 15),
-
               _buildCampo(
                 confirmarController,
                 "Confirmar Senha",
                 isSenha: true,
               ),
               const SizedBox(height: 25),
-
               loading
                   ? const CircularProgressIndicator(color: Colors.white)
                   : _buildBotao("Cadastrar", registrar),
