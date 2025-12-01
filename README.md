@@ -18,7 +18,6 @@ https://github.com/user-attachments/assets/e30a5c87-efc8-457a-a895-8ebcb5797a38
 
 ## 🛠 Como Executar
 
-
 1. Baixe o repositório:
    - Clique em **Code > Download ZIP** no GitHub
    - Extraia o arquivo em qualquer pasta
@@ -30,10 +29,10 @@ https://github.com/user-attachments/assets/e30a5c87-efc8-457a-a895-8ebcb5797a38
 caso tenha duvida rode o comando flutter --version (Cmd como administrador, terminal do vscode)
 
 4. No terminal do VS Code, execute:
-
+```
 flutter pub get
 flutter run
-
+```
 
 5. Escolha onde deseja rodar:
 - **Chrome** (Web)
@@ -52,7 +51,6 @@ Pronto! O app será iniciado automaticamente
 
 * Projeto em Alpha — protótipos e funcionalidades principais implementadas; integração com backend (Firebase) pode estar parcial ou em desenvolvimento.
 * Para dúvidas sobre veja a Capturas em Vídeo de demonstração.
-
 
 ## 🧩Reference
 
