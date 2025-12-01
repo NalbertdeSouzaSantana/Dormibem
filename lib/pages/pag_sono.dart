@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/PagSono/New_Alarm_Card.dart';
-import 'package:flutter_application_1/widgets/PagSono/Sleep_Summary_Card.dart';
+import 'package:flutter_application_1/widgets/PagSono/new_alarm_card.dart';
+import 'package:flutter_application_1/widgets/PagSono/sleep_summary_card.dart';
 
 class PagSono extends StatelessWidget {
   const PagSono({super.key});

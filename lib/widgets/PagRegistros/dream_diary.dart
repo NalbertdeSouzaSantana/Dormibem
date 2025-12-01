@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/dream_entry.dart';
-import 'package:flutter_application_1/widgets/PagRegistros/Dream_Register_Card.dart';
+import 'package:flutter_application_1/widgets/PagRegistros/dream_register_card.dart';
 
 class DreamDiary extends StatefulWidget {
   final List<DreamEntry> entries;

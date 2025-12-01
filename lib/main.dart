@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 import 'package:flutter_application_1/pages/pag_login.dart';
-import 'package:flutter_application_1/pages/Pag_Registros.dart';
+import 'package:flutter_application_1/pages/pag_registros.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/pag_sobre.dart';
 

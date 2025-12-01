@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/PagZen/Zen_Search_Bar.dart';
-import 'package:flutter_application_1/widgets/PagZen/Zen_Sound_List.dart';
+import 'package:flutter_application_1/widgets/PagZen/zen_search_bar.dart';
+import 'package:flutter_application_1/widgets/PagZen/zen_Sound_list.dart';
 
 class PagZen extends StatelessWidget {
   const PagZen({super.key});
